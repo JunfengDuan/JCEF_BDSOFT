@@ -84,7 +84,6 @@ public class ChromeUtil {
         Instant start = now();
         ChromeUtil chromeUtil = new ChromeUtil(expectLoadTimes);
         getCefClient(chromeUtil);
-        System.out.println("get client-------");
         CefBrowser browser = chromeUtil.client.createBrowser(url, false, false);
         browser.getUIComponent().paint(new DebugGraphics());
         //chromeUtil.openDevTools(browser);
