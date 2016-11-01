@@ -135,8 +135,9 @@ public class ChromeUtil {
                //browser.getSource(s -> getBrowserSource(isLoading, s, browser, ref));
             }
         };
-        CefApp instance = CefApp.getInstance(new String[]{"request-context-per-browser=true"});
+        CefApp instance = CefApp.getInstance(new String[]{"--request-context-per-browser=true"});
         client = instance.createClient().addLoadHandler(handler);
+        
         CLIENT_MAP.put(client, ref);
     }
 
